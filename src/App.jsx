@@ -10,13 +10,13 @@ function App() {
   useEffect(() => {
     const storedUserLoggedInInformation = localStorage.getItem("isLoggedIn");
     if (storedUserLoggedInInformation === "1") {
-      console.log("stroed user logged in information!");
       setIsLoggedIn(true);
     }
   }, []);
 
   const loginHandler = (email, password) => {
     localStorage.setItem("isLoggedIn", "1");
+    console.log("LOGIN");
     setIsLoggedIn(true);
   };
 
